@@ -1,0 +1,6 @@
+/**
+ * @param {Event} event Đối tượng sự kiện.
+ */
+document.addEventListener('click', (event) => {
+    event.preventDefault(); // Sẽ có gợi ý
+});
