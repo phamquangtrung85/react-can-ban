@@ -1,6 +1,12 @@
 import React from 'react';
 
 class TimerClass extends React.Component {
+  //đối tượng js
+  state1234 = {
+    name: 'trung',
+    age: 43,
+    job: 'teacher',
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -29,6 +35,7 @@ class TimerClass extends React.Component {
   render() {
     return (
       <div>
+        <p>my name is {this.state1234.name}</p>
         <h2>Đồng hồ đếm (Class Component)</h2>
         <p>Số giây: {this.state.count}</p>
       </div>
