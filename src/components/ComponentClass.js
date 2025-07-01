@@ -4,9 +4,9 @@ import DisplayInfor from './DisplayInfor';
 class ComponentClass extends React.Component {
   state = {
     listUsers: [
-      { id: 1, name: 'Trung', age: 40, province: 'An giang' },
-      { id: 2, name: 'Quang', age: 40, province: 'An giang' },
-      { id: 3, name: 'Phạm', age: 40, province: 'An giang' },
+      { id: 1, name: 'Trung', age: 18, province: 'An giang' },
+      { id: 2, name: 'Quang', age: 27, province: 'An giang' },
+      { id: 3, name: 'Phạm', age: 36, province: 'An giang' },
     ],
   };
 
@@ -50,6 +50,7 @@ class ComponentClass extends React.Component {
     // const myarr = ['Vinh Long', 'Can Tho'];
     return (
       <div>
+        DRY là Don't repeat yourself, Giảm sự lặp lại code
         <DisplayInfor listUsers={this.state.listUsers} />
         {/* <UserInfor /> */}
         {/* <DisplayInfor sex='Famale' province='Dong Thap' postcode='200' /> */}
