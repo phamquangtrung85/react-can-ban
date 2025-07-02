@@ -30,15 +30,15 @@ class DisplayInfor extends React.Component {
         </div>
         {isShow && (
           <div>
-            {listUsers.map((user) => {
-              console.log('>>> user ', user);
+            {listUsers.map((user,i) => {
+              // console.log('>>> user ', user);
               return (
                 <div
                   key={user.id}
                   className={
-                    +user.age <= 18
+                    i % 3===1
                       ? 'red'
-                      : +user.age <= 27
+                      : i % 3===2
                       ? 'green'
                       : 'yellow'
                   }

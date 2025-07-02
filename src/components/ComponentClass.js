@@ -1,5 +1,5 @@
 import React from 'react';
-import UserInfor from './UserInfor';
+import AddUserInfor from './AddUserInfor';
 import DisplayInfor from './DisplayInfor';
 class ComponentClass extends React.Component {
   state = {
@@ -9,7 +9,12 @@ class ComponentClass extends React.Component {
       { id: 3, name: 'Phạm', age: 36, province: 'An giang' },
     ],
   };
-
+  handleAddUser = (objUser) => {
+    console.log(objUser);
+    //thêm dữ liệu vào đầu mảng trước đó
+    this.setState({ listUsers: [objUser, ...this.state.listUsers] });
+    // alert(true);
+  };
   //event là phải gõ đúng như sau vì react định nghĩa rồi
 
   // handleClick = (event) => {
@@ -51,8 +56,8 @@ class ComponentClass extends React.Component {
     return (
       <div>
         DRY là Don't repeat yourself, Giảm sự lặp lại code
+        <AddUserInfor handleAddUser={this.handleAddUser} />
         <DisplayInfor listUsers={this.state.listUsers} />
-        {/* <UserInfor /> */}
         {/* <DisplayInfor sex='Famale' province='Dong Thap' postcode='200' /> */}
         {/*dùng biến, và đặt trong cập ngoặc móc để truyền được nhiều dạng dữ liệu như số, chuỗi, mảng, đối tượng*/}
         {/* <DisplayInfor sex={'Male'} province={myarr} postcode={'500'} /> */}
