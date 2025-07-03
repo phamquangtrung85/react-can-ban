@@ -54,7 +54,7 @@ class ComponentClass extends React.Component {
     //tạo biến java script
     // const myarr = ['Vinh Long', 'Can Tho'];
     return (
-      <div>
+      <>
         DRY là Don't repeat yourself, Giảm sự lặp lại code
         <AddUserInfor handleAddUser={this.handleAddUser} />
         <DisplayInfor listUsers={this.state.listUsers} />
@@ -71,7 +71,7 @@ class ComponentClass extends React.Component {
         <button onMouseOver={(event) => this.handleOnMouseOver(event)}>
           Mouse Over me ne!
         </button> */}
-      </div>
+      </>
     );
   }
 }

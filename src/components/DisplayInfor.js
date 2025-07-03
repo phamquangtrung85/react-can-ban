@@ -31,7 +31,7 @@ class DisplayInfor extends React.Component {
           </span>
         </div>
         {isShow && (
-          <div>
+          <>
             {listUsers.map((user, i) => {
               // console.log('>>> user ', user);
               return (
@@ -49,7 +49,7 @@ class DisplayInfor extends React.Component {
             })}
             {/* gõ tên biến, dùng biến thuộc tính của đối tượng props */}
             {/* my sex is {sex}, my province is {province}, my zip code is {postcode} */}
-          </div>
+          </>
         )}
       </div>
     );
