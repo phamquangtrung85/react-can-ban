@@ -1,5 +1,6 @@
 import React from 'react';
-
+import './DisplayInfor.scss';
+import logo1 from './../diuc.jpg'
 class DisplayInfor extends React.Component {
   state = { isShow: true };
 
@@ -18,7 +19,8 @@ class DisplayInfor extends React.Component {
     // 3 biết lưu thuộc tính đối tượng props
     //const { sex, province, postcode } = this.props;
     return (
-      <div>
+      <div className='display-infor-container'>
+        <img src={logo1}/>
         <div>
           <span
             onClick={(event) => {
@@ -30,21 +32,17 @@ class DisplayInfor extends React.Component {
         </div>
         {isShow && (
           <div>
-            {listUsers.map((user,i) => {
+            {listUsers.map((user, i) => {
               // console.log('>>> user ', user);
               return (
                 <div
                   key={user.id}
                   className={
-                    i % 3===1
-                      ? 'red'
-                      : i % 3===2
-                      ? 'green'
-                      : 'yellow'
+                    i % 3 === 1 ? 'red' : i % 3 === 2 ? 'green' : 'yellow'
                   }
                 >
                   <hr />
-                  my name's {user.name} my old's {user.age}my province's
+                  My name's {user.name}. My old's {user.age}. My province's{' '}
                   {user.province}
                 </div>
               );
