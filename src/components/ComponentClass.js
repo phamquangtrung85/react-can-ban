@@ -15,6 +15,14 @@ class ComponentClass extends React.Component {
     this.setState({ listUsers: [objUser, ...this.state.listUsers] });
     // alert(true);
   };
+  handleDeleteUser = (userId) => {
+    //sao chép danh sách
+    let listUsersClone = [...this.state.listUsers];
+    //lọc danh sách không có userId
+    listUsersClone = listUsersClone.filter((item) => item.id !== userId);
+    //cập nhật listUsers
+    this.setState({ listUsers: listUsersClone });
+  };
   //event là phải gõ đúng như sau vì react định nghĩa rồi
 
   // handleClick = (event) => {
@@ -57,7 +65,10 @@ class ComponentClass extends React.Component {
       <>
         DRY là Don't repeat yourself, Giảm sự lặp lại code
         <AddUserInfor handleAddUser={this.handleAddUser} />
-        <DisplayInfor listUsers={this.state.listUsers} />
+        <DisplayInfor
+          listUsers={this.state.listUsers}
+          handleDeleteUser={this.handleDeleteUser}
+        />
         {/* <DisplayInfor sex='Famale' province='Dong Thap' postcode='200' /> */}
         {/*dùng biến, và đặt trong cập ngoặc móc để truyền được nhiều dạng dữ liệu như số, chuỗi, mảng, đối tượng*/}
         {/* <DisplayInfor sex={'Male'} province={myarr} postcode={'500'} /> */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import './DisplayInfor.scss';
-import logo1 from './../diuc.jpg'
+import logo1 from './../diuc.jpg';
 class DisplayInfor extends React.Component {
   state = { isShow: true };
 
@@ -20,7 +20,7 @@ class DisplayInfor extends React.Component {
     //const { sex, province, postcode } = this.props;
     return (
       <div className='display-infor-container'>
-        <img src={logo1}/>
+        {/* <img src={logo1}/> */}
         <div>
           <span
             onClick={(event) => {
@@ -43,7 +43,15 @@ class DisplayInfor extends React.Component {
                 >
                   <hr />
                   My name's {user.name}. My old's {user.age}. My province's{' '}
-                  {user.province}
+                  {user.province}{' '}
+                  <button
+                    onClick={() => {
+                      this.props.handleDeleteUser(user.id);
+                    }}
+                  >
+                    {' '}
+                    Delete{' '}
+                  </button>
                 </div>
               );
             })}
