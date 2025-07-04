@@ -1,1 +1,0 @@
-this.state.sex=this.targe.value; //thay đổi giá trị state bằng gián tiếp dẫn đễ lỗi không đồng bộ.
