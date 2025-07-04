@@ -2,8 +2,15 @@ import React from 'react';
 import './DisplayInfor.scss';
 import logo1 from './../diuc.jpg';
 class DisplayInfor extends React.Component {
-  state = { isShow: true };
-
+  constructor(props) {
+    //NƠI KHAI BÁO GIÁ TRỊ DỮ LIỆU KHỞI ĐẦU CHO COMPONENT NÀY
+    //kế thừa props - tài sản của component cha
+    super(props);
+    //khởi đầu giá trị state cần chuẩn bị cho class này
+    this.state = { isShow: true };
+  }
+//chuyển state vào trong hàm dựng thêm this trước state cần chuẩn bị
+  // state = { isShow: true };
   handleShowHide = (event) => {
     // alert(true);
     this.setState({ isShow: !this.state.isShow });

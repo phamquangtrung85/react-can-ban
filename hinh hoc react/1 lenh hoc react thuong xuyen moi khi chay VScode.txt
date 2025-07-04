@@ -1,8 +1,9 @@
 cd react-can-ban
 npm start
 
+cd tên dự án
 git add .
-git commit -m 'thêm phần tử cuối mảng, truyền props là hàm'
+git commit -m "prop là hàm xóa đối tượng thì bỏ dấu ngoặc tròn lúc truyền từ cha"
 git push origin dev
 
 ctrl+C tại terminal VScode để tắt server react để máy nhẹ chạy.
