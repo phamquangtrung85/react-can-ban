@@ -1,0 +1,29 @@
+# 1. Chắc chắn bạn đang ở nhánh dev và đã commit/push mọi thứ
+git checkout dev
+
+cd tên dự án
+git add .
+git commit -m "nhập nội dung phiên làm việc"
+git push origin dev
+
+# 2. Chuyển sang nhánh master
+git checkout master
+
+# 3. Cập nhật master
+git pull origin master
+
+# 4. Hợp nhất dev vào master
+git merge dev
+
+(# Nếu có xung đột, giải quyết chúng: KHÔNG CÓ THÌ BỎ QUA PHẦN LỆNH NÀY
+# Mở file bị xung đột, chỉnh sửa
+# git add ten_file_bi_xung_dot.js
+# git commit -m "Giải quyết xung đột khi merge dev vào master" # Git tự tạo message này)
+
+# 5. Đẩy master lên kho lưu trữ từ xa
+git push origin master
+==>NÊN CUT THƯ MỤC HÌNH VÀ TÀI LIỆU SOẠN LÚC HỌC RA KHỎI DỰ ÁN LƯU TRỮ RIÊNG ĐỂ DÙNG SAU NÀY, ĐẶT TÊN GIỐNG TÊN DỮ ÁN + HÌNH ẢNH ĐỂ DỄ NHỚ DÙNG LẠI SAU NÀY.
+
+# 6. Xóa nhánh dev (CÓ  MUỐN GIỮ DEV THÌ BỎ QUA PHẦN LỆNH NÀY)
+# git branch -d dev
+# git push origin --delete dev
